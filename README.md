@@ -1,5 +1,5 @@
 # A boilerplate for static websites
-This is the custom boilerplate we use for our static websites. It uses Middleman as a site generator and Webpack as static asset processor and bundler.
+This is the custom boilerplate we use for static websites at Hacquebord & Buckles. It uses Middleman as a site generator and Webpack as static asset processor and bundler.
 
 ## Requirements
 - Ruby (this project assumes you use [rbenv](http://rbenv.org))
