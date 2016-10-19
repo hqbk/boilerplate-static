@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# script/build: Build the site locally
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+script/bootstrap
+
+echo "==> Building site"
+bundle exec middleman build

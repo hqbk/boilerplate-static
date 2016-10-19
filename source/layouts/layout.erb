@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title><%= current_page.data.title || config.default_title %></title>
+        <meta name="description" content="<%= config.site_description %>">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <%= stylesheet_link_tag 'main' %>
+    </head>
+    <body>
+        <%= yield %>
+
+        <%= yield_content :javascripts %>
+    </body>
+</html>

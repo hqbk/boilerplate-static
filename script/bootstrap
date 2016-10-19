@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# script/bootstrap: Resolve all dependencies that the application requires to
+#                   run.
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+if [ -z "$(rbenv version-name 2>/dev/null)" ]; then
+  which bundle >/dev/null 2>&1 || {
+    echo "==> Installing Bundler"
+    gem install bundler
+    rbenv rehash
+  }
+fi
+
+echo "==> Checking Ruby dependencies..."
+bundle check --path vendor/gems >/dev/null 2>&1 || {
+  echo "==> Installing Ruby dependencies..."
+  bundle install --path vendor/gems --without production
+}
+
+echo "==> Checking Node.js dependencies..."
+
+if ! command -v yarn >/dev/null 2>&1; then
+  npm install -g --no-progress yarn
+fi
+
+yarn install
