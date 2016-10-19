@@ -13,7 +13,3 @@ This is the custom boilerplate we use for our static websites. It uses Middleman
 
 ## More info
 This is just a quick setup of [Middleman](https://middlemanapp.com) and [Webpack](http://webpack.github.io). Checkout the documentation for those projects for more info on how to create a sick website with this.
-
-
-## To do
-- Configure webpack to do optimized builds

@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "watch": "rm -rfv .tmp && webpack --watch -d --progress --color",
-    "build": "rm -rfv .tmp && webpack --bail -p"
+    "watch": "rm -rfv .tmp && webpack --watch -d --progress",
+    "build": "rm -rfv .tmp && webpack --bail -p --progress"
   },
   "author": "Roald Hacquebord <roald@hacquebordbuckles.nl>",
   "devDependencies": {

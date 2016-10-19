@@ -41,7 +41,5 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('[name].css')
   ],
-  postcss: () => [autoprefixer(['> 1%', 'last 2 versions', 'Firefox ESR'])],
-  debug: true,
-  devtool: 'cheap-module-source-map'
+  postcss: () => [autoprefixer(['> 1%', 'last 2 versions', 'Firefox ESR'])]
 };
