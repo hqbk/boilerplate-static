@@ -38,7 +38,7 @@ ignore "assets/*"
 
 # Reload the browser automatically whenever files change
 configure :development do
-  activate :livereload
+  activate :livereload, no_swf: true
 end
 
 ###
