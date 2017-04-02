@@ -34,7 +34,7 @@ module.exports = {
           'css?sourceMap',
           'postcss',
           'resolve-url',
-          'sass?sourceMap',
+          `sass?sourceMap&includePaths[]=${path.resolve(__dirname, 'source/assets')}`,
         ]),
       },
       {
