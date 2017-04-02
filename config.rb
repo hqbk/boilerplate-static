@@ -23,12 +23,11 @@ page '/*.txt', layout: false
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
 # General configuration
-
 activate :external_pipeline,
-         name: :webpack,
-         command: build? ? "npm run build" : "npm run watch",
-         source: ".tmp/dist",
-         latency: 1
+           name: :webpack,
+           command: build? ? "yarn run build" : "yarn run watch",
+           source: ".tmp/dist",
+           latency: 1
 
 set :css_dir, "static"
 set :js_dir, "static"
