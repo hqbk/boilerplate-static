@@ -22,9 +22,4 @@ bundle check --path vendor/gems >/dev/null 2>&1 || {
 }
 
 echo "==> Checking Node.js dependencies..."
-
-if ! command -v yarn >/dev/null 2>&1; then
-  npm install -g --no-progress yarn
-fi
-
 yarn install
