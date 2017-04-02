@@ -7,19 +7,19 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   context: path.resolve(__dirname, 'source/assets'),
   entry: {
-    main: './main'
+    main: './main',
   },
   output: {
     path: path.resolve(__dirname, '.tmp/dist/static'),
-    filename: '[name].js'
+    filename: '[name].js',
   },
   resolve: {
     root: path.resolve(__dirname, 'source/assets'),
     extensions: [
       '',
       '.js',
-      '.scss'
-    ]
+      '.scss',
+    ],
   },
   module: {
     loaders: [
@@ -34,17 +34,17 @@ module.exports = {
           'css?sourceMap',
           'postcss',
           'resolve-url',
-          'sass?sourceMap'
-        ])
+          'sass?sourceMap',
+        ]),
       },
       {
         test: /\.(png|svg|jpg)$/,
-        loader: 'file?name=[path][name].[ext]'
-      }
-    ]
+        loader: 'file?name=[path][name].[ext]',
+      },
+    ],
   },
   plugins: [
-    new ExtractTextPlugin('[name].css')
+    new ExtractTextPlugin('[name].css'),
   ],
-  postcss: () => [autoprefixer(['> 1%', 'last 2 versions', 'Firefox ESR'])]
+  postcss: () => [autoprefixer(['> 1%', 'last 2 versions', 'Firefox ESR'])],
 };
